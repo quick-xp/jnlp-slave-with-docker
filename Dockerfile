@@ -2,7 +2,7 @@ FROM jenkinsci/jnlp-slave
 
 USER root
 RUN apt-get update
-RUN apt-get -y install apt-transport-https ca-certificates curl software-properties-common --no-install-recommends && rm -rf /var/lib/apt/lists/*
+RUN apt-get -y install apt-transport-https ca-certificates curl software-properties-common git --no-install-recommends && rm -rf /var/lib/apt/lists/*
 RUN curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add -
 RUN apt-key fingerprint 0EBFCD88
 
